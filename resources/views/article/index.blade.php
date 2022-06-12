@@ -1,5 +1,5 @@
 @extends('layouts.app')
-<br><br><br>
+
 @section('content')
     <h1>Список статей:</h1>
     <table class="table">
@@ -14,7 +14,7 @@
         <tbody>
           <tr>
             <th scope="row">{{$article->id}}</th>
-            <td>{{$article->name}}</td>
+            <td><a href="{{ route('articles.show', $article) }}">{{$article->name}}</a></td>
             <td>{{Str::limit($article->body, 30)}}</td>
           </tr>
         </tbody>

@@ -18,5 +18,6 @@ Route::get('/', function () {
 });
 
 //Route::get('about', [PageController::class, 'about']);
-Route::get('about', 'App\Http\Controllers\PageController@about');
-Route::get('articles', 'App\Http\Controllers\ArticleController@index');
+Route::get('about', 'App\Http\Controllers\PageController@about')->name('about');
+Route::get('articles', 'App\Http\Controllers\ArticleController@index')->name('articles');
+Route::get('articles/{id}', 'App\Http\Controllers\ArticleController@show')->name('articles.show');
