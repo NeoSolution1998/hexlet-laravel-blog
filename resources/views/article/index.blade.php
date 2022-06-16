@@ -20,4 +20,6 @@
         </tbody>
         @endforeach
       </table>
+
+      <a class="btn btn-outline-success" href="{{ route('articles.create') }}" role="button">Создать статью</a>
 @endsection
